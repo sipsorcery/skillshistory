@@ -695,6 +695,15 @@ const skillsHistory = [
         ]
     },
     {
+        name: "WordPress",
+        parentid: "webdev",
+        colour: "87CEFA",
+        history: [
+            { period: 20132, usage: "regular" },
+            { period: 20131, usage: "regular" },
+        ]
+    },
+    {
         name: "Database Development",
         id: "rdbms",
         description: "Relational Database Managements Systems",
@@ -788,7 +797,6 @@ const skillsHistory = [
         parentid: "rdbms",
         colour: "00FF00",
         history: [
-            { period: 20174, usage: "primary" },
             { period: 20173, usage: "primary" },
             { period: 20172, usage: "primary" },
             { period: 20171, usage: "primary" },
@@ -811,7 +819,6 @@ const skillsHistory = [
         parentid: "rdbms",
         colour: "228B22",
         history: [
-            { period: 20174, usage: "primary" },
             { period: 20173, usage: "primary" },
             { period: 20172, usage: "primary" },
             { period: 20171, usage: "primary" },
@@ -842,10 +849,10 @@ const skillsHistory = [
         parentid: "other",
         colour: "696969",
         history: [
-            { period: 20023, usage: "primary" },
+            { period: 20022, usage: "primary" },
             { period: 20021, usage: "primary" },
             { period: 20014, usage: "primary" },
-            { period: 20001, usage: "primary" },
+            { period: 20011, usage: "primary" },
             { period: 20004, usage: "primary" },
             { period: 20003, usage: "primary" }
         ]
@@ -860,6 +867,37 @@ const skillsHistory = [
             { period: 20194, usage: "regular" },
             { period: 20153, usage: "regular" },
             { period: 20152, usage: "regular" }
+        ]
+    },
+    {
+        name: "iOS/Objective-C Development",
+        colour: "000000",
+        parentid: "other",
+        history: [
+            { period: 20173, usage: "occasional" },
+            { period: 20172, usage: "occasional" },
+            { period: 20171, usage: "occasional" },
+            { period: 20164, usage: "occasional" },
+            { period: 20163, usage: "occasional" },
+            { period: 20162, usage: "occasional" },
+            { period: 20161, usage: "occasional" },
+            { period: 20154, usage: "occasional" },
+            { period: 20153, usage: "occasional" },
+            { period: 20152, usage: "occasional" },
+            { period: 20151, usage: "occasional" },
+            { period: 20144, usage: "occasional" },
+            { period: 20143, usage: "occasional" },
+            { period: 20142, usage: "occasional" },
+            { period: 20141, usage: "occasional" },
+            { period: 20134, usage: "occasional" },
+            { period: 20133, usage: "occasional" },
+            { period: 20132, usage: "occasional" },
+            { period: 20131, usage: "occasional" },
+            { period: 20124, usage: "regular" },
+            { period: 20123, usage: "regular" },
+            { period: 20122, usage: "regular" },
+            { period: 20121, usage: "primary" },
+            { period: 20114, usage: "primary" }
         ]
     },
     {
@@ -881,7 +919,7 @@ const skillsHistory = [
         name: "Network/Socket Development",
         description: "Networking",
         parentid: "other",
-        colour: "00695c",
+        colour: "778899",
         history: [
             { period: 20203, usage: "primary" },
             { period: 20202, usage: "primary" },
