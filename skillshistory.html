@@ -45,7 +45,7 @@
         $(document).ready(function () {            
             // Add a child count to all skills. This allows the display logic to know when an item has children to
             // drill down on and also allows the UI to display a child count number.
-            skillsHistory.forEach(x => x.childcount = skillsHistory.filter(y => x.id !== undefined && x.id === y.parentid).length);
+            skillsHistory.forEach(x => x.childcount = skillsHistory.filter(y => x.id !== undefined && y.parentid !== undefined && y.parentid.includes(x.id)).length);
 
             displayHeaderBlock(headerBlockData);
             displaySkillFilters(skillFilters);
@@ -101,7 +101,7 @@
                     $('#errorMsgDiv').show();
                 }
                 else {
-                    let childSkills = skillsHistory.filter(y => y.parentid !== undefined && y.parentid === parentSkill.id);
+                    let childSkills = skillsHistory.filter(y => y.parentid !== undefined && y.parentid.includes(parentSkill.id));
                     displaySkills(childSkills);
                 }
             }
@@ -129,12 +129,10 @@
 
         /*
         Adds the rows to the skills history table.
-        @param minDateQtrStr: the minimum date quarter integer to display, e.g 20151 which represents
-        the year 2015 and the first quarter.
-        @param maxDateQtrStr: the maximum date quarter integer to display, e.g 20151 which represents
-        the year 2015 and the first quarter.
-        @param skillNamesArr: The array holding the names of the skills to display.
-        @param getChildCount: Function delegate that gets a count of a children for a skill.
+        @param minDateQtrStr: the minimum date quarter integer to display, e.g 20151 which represents the year 2015 and the first quarter.
+        @param maxDateQtrStr: the maximum date quarter integer to display, e.g 20151 which represents the year 2015 and the first quarter.
+        @param skillNamesArr: the array holding the names of the skills to display.
+        @param getChildCount: function delegate that gets a count of a children for a skill.
         @param skillsHistoryArr: the full skills history array.
         */
         function addRowsToTable(minDateQtr, maxDateQtr, skillNamesArr, skillsHistoryArr) {

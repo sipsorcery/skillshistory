@@ -75,7 +75,7 @@ The object consists of an array of skills entries. Each array entry consists of 
  - `name`: the name of the skill and what will be shown in the chart table header when this skill is being displayed.
  - `colour`: the colour to represent this skill's usage with.
  - `id`: optional. If this skill represents a larger skill group then this `id` should be set to that child skills can be associated with it.
- - `parentid`: optional. If this skill is part of a larger skill group then this should be set to the `id` of the parent skill. 
+ - `parentid`: optional. If this skill is part of a larger skill group then this should be set to the `id` of the parent skill. This property can also be set as an array if the skill fits into multiple parent groups.
 
 In the example below the `WPF` skill is a child of the `.NET` skill. When first loaded only skills that have no `parentid` are displayed. 
 
@@ -85,13 +85,17 @@ const skillsHistory = [
   name: "C#/.NET/.NET Core",
   id: ".net",
   colour: "a27bdc",
-  history: [ ]
+  history: [ 
+    { period: 20201, usage: "regular" },
+  ]
 },
 {
-  name: "WPF",
+  name: "Silverlight",
   colour: "034a88",
-  parentid: ".net",
-  history: [ ]
+  parentid: [".net","webdev"],
+  history: [ 
+    { period: 20151, usage: "primary" },
+  ]
 }]
 ```
 

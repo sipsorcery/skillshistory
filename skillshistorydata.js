@@ -1,3 +1,30 @@
+/* 
+INSTALL: If you are using this data for your own site or profile make sure to change set you own data.
+
+The objects below can be used as a starting point. Delete the original data and start from these.
+
+const headerBlockData = {
+    description: "Your Description",
+    linkedinprofile: "Your Linkedin Profile URL",
+    lastupdatedat: "28 Sep 2020"
+};
+
+const skillFilters = [
+    { displayname: "Your Filter Name", filter: "ID of on of your skills"},
+];
+
+const skillsHistory = [
+    {
+        name: "C#/.NET/.NET Core",
+        id: ".net",
+        colour: "a27bdc",
+        history: [
+            { period: 20203, usage: "primary" },
+        ]
+    }
+];
+*/
+
 const headerBlockData = {
     description: "Skills History for Aaron Clauson",
     linkedinprofile: "https://www.linkedin.com/in/aaron-clauson-81770144/",
@@ -95,7 +122,7 @@ const skillsHistory = [
     },
     {
         name: ".NET Framework 0.9/1.x/2.x/3.x/4.x",
-        parentid: ".net",
+        parentid: [".net"],
         colour: "9400D3",
         history: [
             { period: 20203, usage: "occasional" },
@@ -178,7 +205,7 @@ const skillsHistory = [
     },
     {
         name: ".NET Core 3.x",
-        parentid: ".net",
+        parentid: [".net"],
         colour: "9932CC",
         history: [
             { period: 20203, usage: "primary" },
@@ -191,7 +218,7 @@ const skillsHistory = [
     {
         name: "ASP.NET",
         colour: "D8BFD8",
-        parentid: ".net",
+        parentid: [".net", "webdev"],
         history: [
             { period: 20173, usage: "primary" },
             { period: 20172, usage: "primary" },
@@ -239,7 +266,7 @@ const skillsHistory = [
     {
         name: "ASP.NET MVC",
         colour: "DDA0DD",
-        parentid: ".net",
+        parentid: [".net", "webdev"],
         history: [
             { period: 20173, usage: "primary" },
             { period: 20172, usage: "primary" },
@@ -275,7 +302,7 @@ const skillsHistory = [
     {
         name: "ASP.NET Web API",
         colour: "EE82EE",
-        parentid: ".net",
+        parentid: [".net", "webdev"],
         history: [
             { period: 20173, usage: "primary" },
             { period: 20172, usage: "primary" },
@@ -304,7 +331,7 @@ const skillsHistory = [
     {
         name: "ASP.NET Core",
         colour: "DA70D6",
-        parentid: ".net",
+        parentid: [".net", "webdev"],
         history: [
             { period: 20203, usage: "occasional" },
             { period: 20202, usage: "occasional" },
@@ -315,7 +342,7 @@ const skillsHistory = [
     {
         name: "ASP.NET MVC",
         colour: "FF00FF",
-        parentid: ".net",
+        parentid: [".net", "webdev"],
         history: [
             { period: 20203, usage: "occasional" },
             { period: 20202, usage: "occasional" },
@@ -416,7 +443,7 @@ const skillsHistory = [
     {
         name: "Windows Communication Foundation (WCF)",
         colour: "8A2BE2",
-        parentid: ".net",
+        parentid: [".net", "webdev"],
         history: [
             { period: 20104, usage: "primary" },
             { period: 20103, usage: "primary" },
@@ -427,7 +454,7 @@ const skillsHistory = [
     {
         name: "Silverlight",
         colour: "9370DB",
-        parentid: ".net",
+        parentid: [".net","webdev"],
         history: [
             { period: 20113, usage: "occasional" },
             { period: 20112, usage: "occasional" },
