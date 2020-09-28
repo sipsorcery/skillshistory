@@ -6,7 +6,7 @@ The original motivation for this chart was to be able to succinctly display a hi
 
 ## Example:
 
-![Demo](skillshistory_demo.png)
+![Demo](images/skillshistory_demo.png)
 
 # Usage
 

@@ -34,6 +34,9 @@ const headerBlockData = {
 const skillFilters = [
     { displayname: ".NET", filter: ".net"},
     { displayname: "Real-time Communications", filter: "rtc"},
+    { displayname: "Web Development", filter: "webdev"},
+    { displayname: "Database", filter: "rdbms"},
+    { displayname: "Other", filter: "other"},
 ];
 
 const skillsHistory = [
@@ -454,7 +457,7 @@ const skillsHistory = [
     {
         name: "Silverlight",
         colour: "9370DB",
-        parentid: [".net","webdev"],
+        parentid: [".net", "webdev"],
         history: [
             { period: 20113, usage: "occasional" },
             { period: 20112, usage: "occasional" },
@@ -642,7 +645,26 @@ const skillsHistory = [
             { period: 20194, usage: "primary" },
             { period: 20102, usage: "primary" },
             { period: 20101, usage: "primary" },
-            { period: 20094, usage: "primary" },
+            { period: 20081, usage: "primary" },
+            { period: 20074, usage: "primary" },
+            { period: 20073, usage: "primary" },
+            { period: 20072, usage: "primary" },
+            { period: 20071, usage: "primary" },
+            { period: 20064, usage: "primary" },
+            { period: 20063, usage: "primary" },
+            { period: 20062, usage: "primary" },
+            { period: 20061, usage: "primary" },
+            { period: 20054, usage: "primary" },
+            { period: 20053, usage: "primary" },
+            { period: 20052, usage: "primary" },
+        ]
+    },
+    {
+        name: "Asterisk",
+        parentid: "rtc",
+        colour: "FF4500",
+        history: [
+            { period: 20081, usage: "primary" },
             { period: 20074, usage: "primary" },
             { period: 20073, usage: "primary" },
             { period: 20081, usage: "primary" },
@@ -657,6 +679,11 @@ const skillsHistory = [
             { period: 20054, usage: "primary" },
             { period: 20053, usage: "primary" },
             { period: 20052, usage: "primary" },
+            { period: 20051, usage: "primary" },
+            { period: 20044, usage: "primary" },
+            { period: 20043, usage: "primary" },
+            { period: 20042, usage: "primary" },
+            { period: 20041, usage: "primary" },
         ]
     },
     {

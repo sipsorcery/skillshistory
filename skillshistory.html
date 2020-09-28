@@ -24,7 +24,7 @@
     <!-- Meta tags to help when inserting the page as a "Link" on a linkedin profile.
     See https://www.linkedin.com/help/linkedin/answer/46687. -->
     <meta property='og:title' content='Skills History'/>
-    <meta property='og:image' content='https://sipsorcery.github.io/skillshistory/skillshistory_demo.png'/>
+    <meta property='og:image' content='https://sipsorcery.github.io/skillshistory/images/skillshistory_demo.png'/>
     <meta property='og:description' content='Interactive chart of my skills history. Skills are grouped into common categories with detailed drill downs.'/>
     <meta property='og:url' content='https://sipsorcery.github.io/skillshistory/skillshistory.html'/>
 
@@ -102,7 +102,14 @@
                 }
                 else {
                     let childSkills = skillsHistory.filter(y => y.parentid !== undefined && y.parentid.includes(parentSkill.id));
-                    displaySkills(childSkills);
+                    if(childSkills !== undefined && childSkills.length > 0) {
+                        displaySkills(childSkills);
+                    }
+                    else {
+                        // If the skill has no children then display it as a single item in the chart.
+                        // This is useful for old skills that might scroll of the screen.
+                        displaySkills([parentSkill]);
+                    }
                 }
             }
         }
@@ -122,7 +129,8 @@
                     headerRow.append(`<th class="rotate"><a href="javascript:displayChildSkills('${skill}')" class="badge badge-light">${skill} <span class="badge">(+${childCount})</span></a></th>`);
                 }
                 else {
-                    headerRow.append(`<th class="rotate"><label class="badge badge-light">${skill}</label></th>`);
+                    //headerRow.append(`<th class="rotate"><label class="badge badge-light">${skill}</label></th>`);
+                    headerRow.append(`<th class="rotate"><a href="javascript:displayChildSkills('${skill}')" class="badge badge-light">${skill}</a></th>`);
                 }
             });
         }
