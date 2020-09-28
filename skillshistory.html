@@ -102,7 +102,6 @@
                 }
                 else {
                     let childSkills = skillsHistory.filter(y => y.parentid !== undefined && y.parentid === parentSkill.id);
-                    console.log(childSkills);
                     displaySkills(childSkills);
                 }
             }
@@ -189,8 +188,7 @@
         */
         function displaySkillFilters(skillFiltersArr) {
             if(skillFiltersArr !== undefined) {
-                skillFiltersArr.forEach(x => 
-                {
+                skillFiltersArr.forEach(x => {
                     $('#skillfilters').append(` <a href="javascript:displayChildSkills('${x.filter}')" class="badge badge-primary">${x.displayname}</a>`);
                 }
             )};
@@ -244,6 +242,11 @@
             background-image: url("occasional.png");
             background-size: 100%;
         }
+
+        td.legend {
+            background-color: a27bdc;
+            width: 50px;
+        }
     </style>
 
 </head>
@@ -253,6 +256,37 @@
         <div class="row">
             <div class="col-md-12" id="headerblock">
                 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Legend:</h5>
+                <table class="table table-sm table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">Usage Type</th>
+                            <th scope="col"></th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Primary</td>
+                            <td class="primary legend"></td>
+                            <td>Skill was used as a primary one in a job function or project.</td>
+                        </tr>
+                        <tr>
+                            <td>Regular</td>
+                            <td class="regular legend"></td>
+                            <td>Skill was used regularly for a job function or project.</td>
+                        </tr>
+                        <tr>
+                            <td>Occasional</td>
+                            <td class="occasional legend"></td>
+                            <td>Skill was used occasionally for a primary job function or project.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         <div class="row">
@@ -272,7 +306,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row pt-md-5">
             <div class="col-md-12">
 
                 <table id="skillsTable">
