@@ -1,3 +1,14 @@
+const headerBlockData = {
+    description: "Skills History for Aaron Clauson",
+    linkedinprofile: "https://www.linkedin.com/in/aaron-clauson-81770144/",
+    lastupdatedat: "28 Sep 2020"
+};
+
+const skillFilters = [
+    { displayname: ".NET", filter: ".net"},
+    { displayname: "Real-time Communications", filter: "rtc"},
+];
+
 const skillsHistory = [
     {
         name: "C#/.NET/.NET Core",

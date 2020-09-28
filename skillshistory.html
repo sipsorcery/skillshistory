@@ -24,9 +24,9 @@
     <!-- Meta tags to help when inserting the page as a "Link" on a linkedin profile.
     See https://www.linkedin.com/help/linkedin/answer/46687. -->
     <meta property='og:title' content='Skills History'/>
-    <meta property='og:image' content='http://sipsorcery.github.io/skillshistory/skillshistory_demo.png'/>
+    <meta property='og:image' content='https://sipsorcery.github.io/skillshistory/skillshistory_demo.png'/>
     <meta property='og:description' content='Live skills history with drill down.'/>
-    <meta property='og:url' content='http://sipsorcery.github.io/skillshistory/skillshistory.html'/>
+    <meta property='og:url' content='https://sipsorcery.github.io/skillshistory/skillshistory.html'/>
 
     <!-- jquery and bootstrap.-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -39,10 +39,15 @@
 
     <script>
 
-        $(document).ready(function () {
+        const DEFAULT_HEADER_TEXT = "Skills History Table v0.1";
+
+        $(document).ready(function () {            
             // Add a child count to all skills. This allows the display logic to know when an item has children to
             // drill down on and also allows the UI to display a child count number.
             skillsHistory.forEach(x => x.childcount = skillsHistory.filter(y => x.id !== undefined && x.id === y.parentid).length);
+
+            displayHeaderBlock(headerBlockData);
+            displaySkillFilters(skillFilters);
 
             // When the page first opens display the top level skills.
             displaySkills(skillsHistory.filter(x => x.parentid === undefined));
@@ -156,6 +161,40 @@
             }
         }
 
+        /*
+        Displays the header block information above the chart.
+        @param headerObj: the object containing the header block data.
+        */
+        function displayHeaderBlock(headerObj) {
+            if(headerObj === undefined) {
+                $('#headerblock').html(`<p>${DEFAULT_HEADER_TEXT}</p>`);
+            }
+            else {
+                if(headerObj.description !== undefined) {
+                    $('#headerblock').append(`<h5>${headerObj.description}</h5>`);
+                }
+                if(headerObj.linkedinprofile !== undefined) {
+                    $('#headerblock').append(`<a href='${headerObj.linkedinprofile}'>linkedin profile</a>`);
+                }
+                if(headerObj.lastupdatedat !== undefined) {
+                    $('#headerblock').append(`<p>Last updated on: ${headerObj.lastupdatedat}</p>`);
+                }
+            }
+        }
+
+        /*
+        Displays the skill filter options above the chart.
+        @param skillFiltersArr: the array containing the list of skill filters to display.
+        */
+        function displaySkillFilters(skillFiltersArr) {
+            if(skillFiltersArr !== undefined) {
+                skillFiltersArr.forEach(x => 
+                {
+                    $('#skillfilters').append(` <a href="javascript:displayChildSkills('${x.filter}')" class="badge badge-primary">${x.displayname}</a>`);
+                }
+            )};
+        }
+
     </script>
 
     <style>
@@ -211,12 +250,16 @@
 <body>
     <div class="container-lg">
         <div class="row">
+            <div class="col-md-12" id="headerblock">
+                
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-12">
-                <p>Skills Usage Table v0.1</p>
-                <span>Common Skill Filters:</span>
+                <h5>Filters:</h5>
                 <p>
-                    <a href="javascript:displayChildSkills('')" class="badge badge-primary">.</a>
-                    <a href="javascript:displayChildSkills('.net')" class="badge badge-primary">.NET</a>
+                    <a href="javascript:displayChildSkills('')" class="badge badge-primary">Home</a>
+                    <span id="skillfilters" />
                 </p>
             </div>
         </div>
