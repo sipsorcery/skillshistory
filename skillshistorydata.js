@@ -343,7 +343,7 @@ const skillsHistory = [
         ]
     },
     {
-        name: "ASP.NET MVC",
+        name: "ASP.NET Core MVC",
         colour: "FF00FF",
         parentid: [".net", "webdev"],
         history: [
