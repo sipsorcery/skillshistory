@@ -32,6 +32,7 @@ const headerBlockData = {
 };
 
 const skillFilters = [
+    { displayname: "C/C++", filter: "cpp"},
     { displayname: ".NET", filter: ".net"},
     { displayname: "Real-time Communications", filter: "rtc"},
     { displayname: "Web Development", filter: "webdev"},
@@ -495,6 +496,7 @@ const skillsHistory = [
     {
         name: "C/C++",
         colour: "78ccf0",
+        id: "cpp",
         history: [
             { period: 20203, usage: "regular" },
             { period: 20202, usage: "regular" },
@@ -533,6 +535,105 @@ const skillsHistory = [
             { period: 20091, usage: "primary" },
             { period: 20084, usage: "primary" },
             { period: 20083, usage: "primary" },
+        ]
+    },
+    {
+        name: "Bitcoin Core - msvc build & devops",
+        colour: "00BFFF",
+        parentid: "cpp",
+        history: [
+            { period: 20203, usage: "occasional" },
+            { period: 20202, usage: "occasional" },
+            { period: 20201, usage: "occasional" },
+            { period: 20194, usage: "occasional" },
+            { period: 20193, usage: "occasional" },
+            { period: 20192, usage: "regular" },
+            { period: 20191, usage: "occasional" },
+            { period: 20184, usage: "occasional" },
+            { period: 20183, usage: "occasional" },
+            { period: 20182, usage: "regular" },
+            { period: 20181, usage: "regular" },
+            { period: 20174, usage: "occasional" }
+        ]
+    },
+    {
+        name: "ffmpeg, libvpx & various h264",
+        colour: "87CEFA	",
+        parentid: "cpp",
+        history: [
+            { period: 20203, usage: "occasional" },
+            { period: 20202, usage: "occasional" },
+            { period: 20201, usage: "occasional" }
+        ]
+    },
+    {
+        name: "Managed C++/CX Video Streaming",
+        colour: "78ccf0",
+        parentid: "cpp",
+        history: [
+            { period: 20173, usage: "primary" },
+            { period: 20172, usage: "primary" },
+            { period: 20171, usage: "primary" },
+            { period: 20164, usage: "primary" },
+            { period: 20163, usage: "primary" },
+            { period: 20162, usage: "primary" },
+            { period: 20161, usage: "primary" },
+            { period: 20154, usage: "primary" },
+            { period: 20153, usage: "primary" },
+            { period: 20152, usage: "primary" },
+            { period: 20151, usage: "primary" },
+            { period: 20144, usage: "primary" },
+            { period: 20143, usage: "primary" },
+            { period: 20142, usage: "primary" },
+            { period: 20141, usage: "primary" },
+            { period: 20134, usage: "primary" },
+            { period: 20133, usage: "primary" },
+            { period: 20132, usage: "primary" },
+            { period: 20131, usage: "primary" },
+        ]
+    },
+    {
+        name: "Legacy C app support",
+        colour: "191970",
+        parentid: "cpp",
+        history: [
+            { period: 20093, usage: "primary" },
+            { period: 20092, usage: "primary" },
+            { period: 20091, usage: "primary" },
+            { period: 20084, usage: "primary" },
+            { period: 20083, usage: "primary" },
+            { period: 20082, usage: "primary" },
+        ]
+    },
+    {
+        name: "COM and Win32",
+        colour: "0000CD",
+        parentid: "cpp",
+        history: [
+            { period: 20203, usage: "regular" },
+            { period: 20201, usage: "regular" },
+            { period: 20194, usage: "regular" },
+            { period: 20153, usage: "regular" },
+            { period: 20152, usage: "regular" }
+        ]
+    },
+    {
+        name: "Asterisk Open Source",
+        colour: "6A5ACD",
+        parentid: "cpp",
+        history: [
+            { period: 20082, usage: "occasional" },
+            { period: 20081, usage: "occasional" },
+            { period: 20074, usage: "regular" },
+            { period: 20073, usage: "regular" },
+            { period: 20072, usage: "regular" },
+            { period: 20071, usage: "occasional" },
+            { period: 20064, usage: "occasional" },
+            { period: 20063, usage: "occasional" },
+            { period: 20062, usage: "occasional" },
+            { period: 20061, usage: "occasional" },
+            { period: 20054, usage: "occasional" },
+            { period: 20053, usage: "occasional" }
         ]
     },
     {
@@ -913,7 +1014,7 @@ const skillsHistory = [
     },
     {
         name: "Microsoft Media Foundation",
-        parentid: "other",
+        parentid: ["other","cpp"],
         colour: "708090",
         history: [
             { period: 20203, usage: "regular" },
