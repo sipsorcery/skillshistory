@@ -13,21 +13,21 @@ The original motivation for this chart was to be able to succinctly display a hi
 If you want to host the chart on your own site:
 
 1. Copy the following files to your site:
-  - `skillhistory.html`
+  - `index.html`
   - `occasional.png`
   - `primary.png`
   - `regular.png`
   - `skillshistorydata.js`
 
 2. Edit `skillshistorydata.js` and set your own data (see [Skills History Data](#skills-history-data)).
-3. Open `skillshistory.html` in a browser.
+3. Open `index.html` in a browser.
 
 If you want to take advantage of GitHub pages hosting:
 
 1. Fork this repository.
 2. Edit `skillshistorydata.js` and set your own data (see [Skills History Data](#skills-history-data)).
 3. In your repository's settings [enable GitHub Pages](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/creating-a-github-pages-site).
-4. Browse to your GitHub pages site and enter the `skillshistory.html` as the URL to view the chart, e.g. [https://sipsorcery.github.io/skillshistory/skillshistory.html](https://sipsorcery.github.io/skillshistory/skillshistory.html).
+4. Browse to your GitHub pages site and enter the `index.html` as the URL to view the chart, e.g. [https://sipsorcery.github.io/skillshistory/index.html](https://sipsorcery.github.io/skillshistory/index.html).
 
 # Skills History Data
 
@@ -136,11 +136,11 @@ For periods here a skill was not sued at all no entry should be supplied.
 
  To include the chart as shown in the Screenshot above:
 
- - Make sure to edit your `skillshistory.html` file to set the metadata fields to match your own site. The metadata fields required by Linked in are described [here](https://www.linkedin.com/help/linkedin/answer/46687). The two properties below need to have the `content` set to match wherever your page is hosted:
+ - Make sure to edit your `index.html` file to set the metadata fields to match your own site. The metadata fields required by Linked in are described [here](https://www.linkedin.com/help/linkedin/answer/46687). The two properties below need to have the `content` set to match wherever your page is hosted:
    - `<meta property='og:image' content='https://sipsorcery.github.io/skillshistory/skillshistory_demo.png'/>`
-   - `    <meta property='og:url' content='https://sipsorcery.github.io/skillshistory/skillshistory.html'/>`
+   - `    <meta property='og:url' content='https://sipsorcery.github.io/skillshistory/index.html'/>`
  - In your Linkedin Profile click `Add Profile Section->Links`,
- - In the `Add a link` form set the link to the HTML page of your skills chart, this can be your GitHub pages site, e.g. `https://sipsorcery.github.io/skillshistory/skillshistory.html`,
+ - In the `Add a link` form set the link to the HTML page of your skills chart, this can be your GitHub pages site, e.g. `https://sipsorcery.github.io/skillshistory/index.html`,
 - Enter a `Title` and `Description`.
 - If Linkedin can find your page and accepts the `metadata` values then your image should be displayed as shown below. If your image does not get displayed double check the metadata fields were set correctly in the first step and check your page using [Linkedin Post Inspector](https://www.linkedin.com/post-inspector/inspect/).
 
